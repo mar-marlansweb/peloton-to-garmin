@@ -31,6 +31,26 @@ public class WorkoutHelperTests
 		return WorkoutHelper.GetTitle(workout, new Format());
 	}
 
+	[TestCase("My Title", "é", ExpectedResult = "My_Title_with_é")]
+	[TestCase("My Title", "ä", ExpectedResult = "My_Title_with_ä")]
+	[TestCase("My Title", "&", ExpectedResult = "My_Title_with_&")]
+	public string GetTitle_Should_Handle_SpecialChars(string title, string instructor)
+	{
+		var workout = new Workout()
+		{
+			Ride = new Ride()
+			{
+				Title = title,
+				Instructor = new Instructor()
+				{
+					Name = instructor
+				}
+			}
+		};
+
+		return WorkoutHelper.GetTitle(workout, new Format());
+	}
+
 	[Test]
 	public void GetTitle_NullRide_ShouldReturn_RideId()
 	{
