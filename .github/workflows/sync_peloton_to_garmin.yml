@@ -5,8 +5,6 @@ name: 🔄 Sync Workflow
 # Controls when the action will run.
 on:
   workflow_dispatch:
-    branches:
-      - TimeZeon-Change
     inputs:
       workoutsToDownload:
         type: number
@@ -15,7 +13,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: '0 0 31 2 *' # niemals ausgeführt (Cron deaktiviert)
+    - cron: '0 1 1 * *'
 
 env:
   OUTPUT_DIR: /app/output
@@ -95,5 +93,6 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
+
 
 
