@@ -4,25 +4,25 @@
 > [!TIP]
 > You can find specific Upgrade Instructions by visitng the [Install Page](https://philosowaffle.github.io/peloton-to-garmin/latest/install/) for your particular flavor of P2G and looking for the section titled `⬆️ Updating`.
 
-## Fixes
+## Features
 
-- [#779] Fix failed to deserialize error when there was a `null` accuracy value in the workout samples
+- [#795] Full solution for new Peloton Authentication Issues - special thanks to (@danieljmt)
 
 ## Docker Tags
 
 - Console
     - `console-stable`
     - `console-latest`
-    - `console-v5.0.2`
-    - `console-v5`
+    - `console-v6.0.0`
+    - `console-v6`
 
 - Api
     - `api-stable`
     - `api-latest`
-    - `api-v5.0.2`
-    - `api-v5`
+    - `api-v6.0.0`
+    - `api-v6`
 - WebUI
     - `webui-stable`
     - `webui-latest`
-    - `webui-v5.0.2`
-    - `webui-v5`
+    - `webui-v6.0.0`
+    - `webui-v6`
